@@ -3,9 +3,11 @@ on:
   push:  
     branches:  
     - main  
+    - features
   pull_request:  
     branches:  
     - main  
+    - features
 jobs:  
  lint:  
   runs-on: ubuntu-latest  
