@@ -9,7 +9,10 @@ on:
     - main  
     - features
 jobs:
- lint:
+
+
+
+  lint:
   runs-on: ubuntu-latest
   steps:
   - uses: actions/checkout@v4
@@ -21,6 +24,7 @@ jobs:
     run: npm clean-install
   - name: Run linter
     run: npm run lint
+
 
   unit-tests:
     needs: lint
@@ -40,3 +44,5 @@ jobs:
         with:
   name: unit-test-${{ github.sha }}
   path: reports/report.xml
+
+
